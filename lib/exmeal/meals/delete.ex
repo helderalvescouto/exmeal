@@ -1,6 +1,7 @@
 defmodule Exmeal.Meals.Delete do
-  alias Exmeal.Meals.Meal
+
   alias Exmeal.{Error, Repo}
+  alias Exmeal.Meals.Meal
 
   def call(id) do
     Meal

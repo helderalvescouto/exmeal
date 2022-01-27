@@ -3,7 +3,7 @@ defmodule ExmealWeb.MealsViewTest do
 
   import Phoenix.View
 
-  alias Exmeal.Meal
+  alias Exmeal.Meals.Meal
 
   alias ExmealWeb.MealsView
 
@@ -14,13 +14,11 @@ defmodule ExmealWeb.MealsViewTest do
     response = render(MealsView, "create.json", meal: meal)
 
     assert %{
-             meal: %{
-               meal: %Meal{
-                 calories: 20,
-                 date: ~D[2001-05-02],
-                 description: "Banana",
-                 id: _id
-               }
+             meal: %Meal{
+               calories: 20,
+               date: ~D[2001-05-02],
+               description: "Banana",
+               id: _id
              },
              message: "Meal created!"
            } = response
