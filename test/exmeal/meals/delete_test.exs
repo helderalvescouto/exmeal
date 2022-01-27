@@ -1,6 +1,8 @@
 defmodule Exmeal.Meals.DeleteTest do
   use Exmeal.DataCase
 
+  alias Exmeal.Meals.Meal
+
   describe "Delete Meal" do
     test "when a valid id is given, returns the meal" do
       params = %{
@@ -14,7 +16,7 @@ defmodule Exmeal.Meals.DeleteTest do
       response = Exmeal.delete_meal(meal.id)
 
       assert {:ok,
-              %Exmeal.Meal{
+              %Meal{
                 calories: 20,
                 date: ~D[2001-05-02],
                 description: "Banana",
