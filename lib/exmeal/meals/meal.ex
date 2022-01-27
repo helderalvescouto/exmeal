@@ -7,6 +7,8 @@ defmodule Exmeal.Meals.Meal do
 
   @required_params [:description, :date, :calories]
 
+  @derive {Jason.Encoder, only: [:id, :description, :date, :calories]}
+
   schema "meals" do
     field(:description, :string)
     field(:date, :date)
@@ -19,13 +21,5 @@ defmodule Exmeal.Meals.Meal do
     struct
     |> cast(params, @required_params)
     |> validate_required(@required_params)
-    # |> validate_date(params)
   end
-
-  # defp validate_date(changeset, %{date: date} = _params) do
-  #   case Date.from_iso8601(date) do
-  #     {:error, _invalid_format} -> add_error(changeset, :date, "Invalid date format!")
-  #     {:ok, _date} -> changeset
-  #   end
-  # end
 end
