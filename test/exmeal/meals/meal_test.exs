@@ -1,9 +1,9 @@
-defmodule Exmeal.MealTest do
+defmodule Exmeal.Meals.MealTest do
   use Exmeal.DataCase
 
   alias Ecto.Changeset
 
-  alias Exmeal.Meal
+  alias Exmeal.Meals.Meal
 
   describe "changeset/1" do
     test "when all params are valid, returns a valid changeset" do

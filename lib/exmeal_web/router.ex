@@ -3,10 +3,13 @@ defmodule ExmealWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+    plug UUIDChecker
   end
 
   scope "/api", ExmealWeb do
     pipe_through :api
+
+    get "/", WelcomeController, :index
 
     resources "/meals", MealsController, except: [:new, :edit]
   end
