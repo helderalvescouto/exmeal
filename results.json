@@ -4,18 +4,18 @@
   "invalid": [],
   "passed": [
     {
-      "describe": "Create Meal",
-      "file": "/Users/heldercouto/exmeal/test/exmeal/meals/create_test.exs",
-      "line": 24,
-      "module": "Elixir.Exmeal.Meals.CreateTest",
-      "test": "test Create Meal when there are invalid params, returns an error"
+      "describe": "Update Meal",
+      "file": "/Users/heldercouto/exmeal/test/exmeal/meals/update_test.exs",
+      "line": 26,
+      "module": "Elixir.Exmeal.Meals.UpdateTest",
+      "test": "test Update Meal when an invalid id is given, returns an error"
     },
     {
-      "describe": "Create Meal",
-      "file": "/Users/heldercouto/exmeal/test/exmeal/meals/create_test.exs",
+      "describe": "Update Meal",
+      "file": "/Users/heldercouto/exmeal/test/exmeal/meals/update_test.exs",
       "line": 7,
-      "module": "Elixir.Exmeal.Meals.CreateTest",
-      "test": "test Create Meal when all params are valid, returns the meal"
+      "module": "Elixir.Exmeal.Meals.UpdateTest",
+      "test": "test Update Meal when a valid id is given, returns the meal"
     }
   ],
   "skiped": []
