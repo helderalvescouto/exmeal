@@ -1,6 +1,5 @@
 defmodule Exmeal.Meals.Get do
   alias Exmeal.Meals.Meal
-  # alias Ecto.UUID
   alias Exmeal.{Error, Repo}
 
   def get_by_id(id) do

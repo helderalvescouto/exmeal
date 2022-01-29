@@ -1,22 +1,30 @@
 defmodule Exmeal.MealsControllerTest do
   use ExmealWeb.ConnCase, async: true
 
+  import Exmeal.Factory
+
   describe "create/2" do
     test "when all params are valid, creates a meal", %{conn: conn} do
-      params = %{description: "Banana", date: "2001-05-02", calories: "20", user_id: "69961117-d966-4e2f-ac55-476d4f78dddf"}
+      user_params = build(:user_params)
+
+      {:ok, user} = Exmeal.create_user(user_params)
+
+      params = %{description: "Banana", date: "2001-05-02", calories: "20", user_id: user.id}
 
       response =
         conn
         |> post(Routes.meals_path(conn, :create, params))
         |> json_response(:created)
 
+      user_id = user.id
+
       assert %{
                "meal" => %{
+                 "id" => _id,
                  "calories" => 20,
                  "date" => "2001-05-02",
                  "description" => "Banana",
-                 "id" => _id,
-                 "user_id" => "69961117-d966-4e2f-ac55-476d4f78dddf"
+                 "user_id" => ^user_id
                },
                "message" => "Meal created!"
              } = response
@@ -25,7 +33,13 @@ defmodule Exmeal.MealsControllerTest do
     test "when there are invalid params, returns an error", %{conn: conn} do
       params = %{description: "Banana"}
 
-      expected_response = %{"message" => %{"calories" => ["can't be blank"], "date" => ["can't be blank"], "user_id" => ["can't be blank"]}}
+      expected_response = %{
+        "message" => %{
+          "calories" => ["can't be blank"],
+          "date" => ["can't be blank"],
+          "user_id" => ["can't be blank"]
+        }
+      }
 
       response =
         conn
@@ -38,7 +52,16 @@ defmodule Exmeal.MealsControllerTest do
 
   describe "delete/2" do
     test "when id exist, delete the meal", %{conn: conn} do
-      params = %{description: "Banana", date: "2001-05-02", calories: "20", user_id: "69961117-d966-4e2f-ac55-476d4f78dddf"}
+      user_params = build(:user_params)
+
+      {:ok, user} = Exmeal.create_user(user_params)
+
+      params = %{
+        description: "Banana",
+        date: "2001-05-02",
+        calories: "20",
+        user_id: user.id
+      }
 
       {:ok, %{id: id}} = Exmeal.create_meal(params)
 
@@ -66,7 +89,11 @@ defmodule Exmeal.MealsControllerTest do
 
   describe "update/2" do
     test "when id exist, update the meal", %{conn: conn} do
-      params = %{description: "Banana", date: "2001-05-02", calories: "20", user_id: "69961117-d966-4e2f-ac55-476d4f78dddf"}
+      user_params = build(:user_params)
+
+      {:ok, user} = Exmeal.create_user(user_params)
+
+      params = %{description: "Banana", date: "2001-05-02", calories: "20", user_id: user.id}
 
       {:ok, meal} = Exmeal.create_meal(params)
 
@@ -77,12 +104,15 @@ defmodule Exmeal.MealsControllerTest do
         |> put(Routes.meals_path(conn, :update, id))
         |> json_response(:ok)
 
+      user_id = user.id
+
       assert %{
                "meal" => %{
+                 "id" => _id,
                  "calories" => 20,
                  "date" => "2001-05-02",
                  "description" => "Banana",
-                 "id" => _id
+                 "user_id" => ^user_id
                }
              } = response
     end
@@ -101,7 +131,16 @@ defmodule Exmeal.MealsControllerTest do
 
   describe "get/2" do
     test "when id exist, return the meal", %{conn: conn} do
-      params = %{description: "Banana", date: "2001-05-02", calories: "20", user_id: "69961117-d966-4e2f-ac55-476d4f78dddf"}
+      user_params = build(:user_params)
+
+      {:ok, user} = Exmeal.create_user(user_params)
+
+      params = %{
+        description: "Banana",
+        date: "2001-05-02",
+        calories: "20",
+        user_id: user.id
+      }
 
       {:ok, meal} = Exmeal.create_meal(params)
 
@@ -112,13 +151,15 @@ defmodule Exmeal.MealsControllerTest do
         |> get(Routes.meals_path(conn, :show, id))
         |> json_response(:ok)
 
+      user_id = user.id
+
       assert %{
                "meal" => %{
                  "calories" => 20,
                  "date" => "2001-05-02",
                  "description" => "Banana",
                  "id" => _id,
-                 "user_id" => "69961117-d966-4e2f-ac55-476d4f78dddf"
+                 "user_id" => ^user_id
                }
              } = response
     end
