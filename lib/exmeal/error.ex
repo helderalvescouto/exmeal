@@ -12,7 +12,9 @@ defmodule Exmeal.Error do
     }
   end
 
+  def build_calories_error, do: build(:bad_request, "Invalid data")
+
   def build_meal_not_found_error, do: build(:not_found, "Meal not found!")
 
-  def build_calories_error, do: build(:bad_request, "Invalid data")
+  def build_user_not_found_error, do: build(:not_found, "User not found!")
 end

@@ -1,4 +1,4 @@
-defmodule Exmeal.User.UpdateTest do
+defmodule Exmeal.Users.UpdateTest do
   use Exmeal.DataCase
 
   import Exmeal.Factory
@@ -26,7 +26,7 @@ defmodule Exmeal.User.UpdateTest do
       id = "a6ef9b39-d638-4835-9ad7-dbe48d1257eb"
       response = Exmeal.update_user(%{"id" => id})
 
-      assert {:error, %Exmeal.Error{result: "User not found", status: :not_found}} = response
+      assert {:error, %Exmeal.Error{result: "User not found!", status: :not_found}} = response
     end
   end
 end

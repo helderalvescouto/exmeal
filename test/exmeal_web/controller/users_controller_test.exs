@@ -72,7 +72,7 @@ defmodule Exmeal.UsersControllerTest do
         |> json_response(:not_found)
 
       assert %{
-          "message" => "User not found"
+          "message" => "User not found!"
         } = response
     end
   end
@@ -112,7 +112,7 @@ defmodule Exmeal.UsersControllerTest do
         |> put(Routes.users_path(conn, :update, id))
         |> json_response(:not_found)
 
-      assert %{"message" => "User not found"} = response
+      assert %{"message" => "User not found!"} = response
     end
   end
 
@@ -147,7 +147,7 @@ defmodule Exmeal.UsersControllerTest do
         |> get(Routes.users_path(conn, :update, id))
         |> json_response(:not_found)
 
-      assert %{"message" => "User not found"} = response
+      assert %{"message" => "User not found!"} = response
     end
   end
 end
