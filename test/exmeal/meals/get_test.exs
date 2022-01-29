@@ -8,7 +8,8 @@ defmodule Exmeal.Meals.GetTest do
       params = %{
         calories: 20,
         date: ~D[2001-05-02],
-        description: "Banana"
+        description: "Banana",
+        user_id: "388fccf4-f3bb-4822-9817-973a62158d20"
       }
 
       {_ok, meal} = Exmeal.create_meal(params)
