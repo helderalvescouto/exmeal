@@ -26,5 +26,6 @@ defmodule Exmeal.Meals.Meal do
     struct
     |> cast(params, @required_params)
     |> validate_required(@required_params)
+    |> foreign_key_constraint(:user_id, message: "User doesn't exist")
   end
 end

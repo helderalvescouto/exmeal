@@ -3,28 +3,26 @@ defmodule Exmeal.Factory do
 
   alias Exmeal.{Meals.Meal, Users.User}
 
-  def meals_params_factory do
-    {:ok, %{id: id}} = build(:user_params)
-
+  def meal_params_factory do
     %{
       description: "Banana",
       date: "2001-05-02",
       calories: "20",
-      user_id: id
+      user_id: "69961117-d966-4e2f-ac55-476d4f78dddf"
     }
   end
 
   def meal_factory do
     %Meal{
+      id: "69961117-d966-4e2f-ac55-476d4f78ddfa",
       description: "banana",
       date: "2001-05-02",
       calories: "2",
-      user_id: "388fccf4-f3bb-4822-9817-973a62158d20",
-      id: "69961117-d966-4e2f-ac55-476d4f78ddfa"
+      user_id: "69961117-d966-4e2f-ac55-476d4f78dddf"
     }
   end
 
-  def users_params_factory do
+  def user_params_factory do
     %{
       name: "Jp",
       email: "jp@banana.com",

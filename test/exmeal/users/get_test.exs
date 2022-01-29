@@ -7,7 +7,7 @@ defmodule Exmeal.Users.GetTest do
 
   describe "Get User" do
     test "when a valid id is given, returns the user" do
-      user_params = build(:users_params)
+      user_params = build(:user_params)
 
       {:ok, %User{id: id}} = Exmeal.create_user(user_params)
 

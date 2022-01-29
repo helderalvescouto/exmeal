@@ -1,25 +1,18 @@
 defmodule Exmeal.Meals.CreateTest do
   use Exmeal.DataCase
 
-  import Exmeal.Factory
-
   alias Exmeal.Meals.Meal
-  alias Exmeal.Users.User
 
   describe "Create Meal" do
     test "when all params are valid, returns the meal" do
-      {:ok, %{id: id}} = build(:user)
-
       params = %{
         description: "Batata",
         date: "2001-05-02",
         calories: "20",
-        user_id: id
+        user_id: "69961117-d966-4e2f-ac55-476d4f78dddf"
       }
 
       response = Exmeal.create_meal(params)
-
-      IO.inspect(response, label: "RESPONSE")
 
       assert {:ok,
               %Meal{
@@ -27,7 +20,7 @@ defmodule Exmeal.Meals.CreateTest do
                 date: ~D[2001-05-02],
                 description: "Banana",
                 id: _id,
-                user_id: id
+                user_id: "69961117-d966-4e2f-ac55-476d4f78dddf"
               }} = response
     end
 

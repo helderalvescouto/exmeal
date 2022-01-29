@@ -10,7 +10,7 @@ defmodule ExmealWeb.UsersViewTest do
   alias ExmealWeb.UsersView
 
   test "render create.json" do
-    user_params = build(:users_params)
+    user_params = build(:user_params)
 
     {:ok, %User{id: id} = user} = Exmeal.create_user(user_params)
 
@@ -28,7 +28,7 @@ defmodule ExmealWeb.UsersViewTest do
   end
 
   test "render user.json" do
-    user_params = build(:users_params)
+    user_params = build(:user_params)
 
     {:ok, %User{id: id} = user} = Exmeal.create_user(user_params)
 

@@ -7,7 +7,7 @@ defmodule Exmeal.UsersControllerTest do
 
   describe "create/2" do
     test "when all params are valid, creates a user", %{conn: conn} do
-      params = build(:users_params)
+      params = build(:user_params)
 
       response =
         conn
@@ -51,7 +51,7 @@ defmodule Exmeal.UsersControllerTest do
 
   describe "delete/2" do
     test "when id exist, delete the user", %{conn: conn} do
-      params = build(:users_params)
+      params = build(:user_params)
 
       {:ok, %User{id: id}} = Exmeal.create_user(params)
 
@@ -79,7 +79,7 @@ defmodule Exmeal.UsersControllerTest do
 
   describe "update/2" do
     test "when id exist, update the user", %{conn: conn} do
-      params = build(:users_params)
+      params = build(:user_params)
 
       {:ok, %User{id: id}} = Exmeal.create_user(params)
 
@@ -118,7 +118,7 @@ defmodule Exmeal.UsersControllerTest do
 
   describe "get/2" do
     test "when id exist, return the meal", %{conn: conn} do
-      params = build(:users_params)
+      params = build(:user_params)
 
       {:ok, %User{id: id}} = Exmeal.create_user(params)
 

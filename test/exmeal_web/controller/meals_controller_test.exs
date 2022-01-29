@@ -1,8 +1,6 @@
 defmodule Exmeal.MealsControllerTest do
   use ExmealWeb.ConnCase, async: true
 
-  import Exmeal.Factory
-
   describe "create/2" do
     test "when all params are valid, creates a meal", %{conn: conn} do
       params = %{description: "Banana", date: "2001-05-02", calories: "20", user_id: "69961117-d966-4e2f-ac55-476d4f78dddf"}

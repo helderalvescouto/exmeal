@@ -8,7 +8,8 @@ defmodule Exmeal.Meals.DeleteTest do
       params = %{
         calories: 20,
         date: ~D[2001-05-02],
-        description: "Banana"
+        description: "Banana",
+        user_id: "69961117-d966-4e2f-ac55-476d4f78dddf"
       }
 
       {_ok, meal} = Exmeal.create_meal(params)
@@ -20,7 +21,8 @@ defmodule Exmeal.Meals.DeleteTest do
                 calories: 20,
                 date: ~D[2001-05-02],
                 description: "Banana",
-                id: _id
+                id: _id,
+                user_id: "69961117-d966-4e2f-ac55-476d4f78dddf"
               }} = response
     end
 

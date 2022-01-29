@@ -7,7 +7,7 @@ defmodule Exmeal.Users.UpdateTest do
 
   describe "Update Meal" do
     test "when a valid id is given, returns the meal" do
-      user_params = build(:users_params)
+      user_params = build(:user_params)
 
       {:ok, %User{id: id}} = Exmeal.create_user(user_params)
 

@@ -1,25 +1,32 @@
 defmodule Exmeal.Meals.UpdateTest do
   use Exmeal.DataCase
 
+  import Exmeal.Factory
+
   alias Exmeal.Meals.Meal
 
   describe "Update Meal" do
     test "when a valid id is given, returns the meal" do
+      %{id: user_id} = build(:user)
+
       params = %{
         calories: 20,
         date: ~D[2001-05-02],
-        description: "Banana"
+        description: "Banana",
+        user_id: user_id
       }
+
       {_ok, meal} = Exmeal.create_meal(params)
 
       response = Exmeal.update_meal(%{"id" => meal.id, "calories" => 25})
 
       assert {:ok,
               %Meal{
-                calories: 25,
-                date: ~D[2001-05-02],
+                id: _id,
                 description: "Banana",
-                id: _id
+                date: ~D[2001-05-02],
+                calories: 25,
+                user_id: _user_id
               }} = response
     end
 

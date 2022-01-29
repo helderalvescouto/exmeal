@@ -7,7 +7,7 @@ defmodule Exmeal.Users.DeleteTest do
 
   describe "Delete user" do
     test "when a valid id is given, returns the user" do
-      params = build(:users_params)
+      params = build(:user_params)
 
       {:ok, %User{id: id}} = Exmeal.create_user(params)
 

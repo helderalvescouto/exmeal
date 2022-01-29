@@ -9,7 +9,7 @@ defmodule Exmeal.Users.UserTest do
 
   describe "changeset/1" do
     test "when all params are valid, returns a valid changeset" do
-      params = build(:users_params)
+      params = build(:user_params)
 
       response = User.changeset(params)
 

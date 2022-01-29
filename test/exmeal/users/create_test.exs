@@ -7,7 +7,7 @@ defmodule Exmeal.Users.CreateTest do
 
   describe "Create User" do
     test "when all params are valid, returns the user" do
-      user_params = build(:users_params)
+      user_params = build(:user_params)
 
       {:ok, response} = Exmeal.create_user(user_params)
 
