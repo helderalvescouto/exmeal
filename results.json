@@ -2,16 +2,16 @@
   "excluded": [],
   "failed": [
     {
-      "describe": "changeset/1",
-      "file": "/Users/heldercouto/exmeal/test/exmeal/meals/meal_test.exs",
-      "line": 9,
-      "module": "Elixir.Exmeal.Meals.MealTest",
-      "test": "test changeset/1 when all params are valid, returns a valid changeset"
+      "describe": "Update Meal",
+      "file": "/Users/heldercouto/exmeal/test/exmeal/meals/update_test.exs",
+      "line": 7,
+      "module": "Elixir.Exmeal.Meals.UpdateTest",
+      "test": "test Update Meal when a valid id is given, returns the meal"
     },
     {
       "describe": "Create Meal",
       "file": "/Users/heldercouto/exmeal/test/exmeal/meals/create_test.exs",
-      "line": 7,
+      "line": 10,
       "module": "Elixir.Exmeal.Meals.CreateTest",
       "test": "test Create Meal when all params are valid, returns the meal"
     },
@@ -30,11 +30,18 @@
       "test": "test Get Meal when a valid id is given, returns the meal"
     },
     {
-      "describe": "Update Meal",
-      "file": "/Users/heldercouto/exmeal/test/exmeal/meals/update_test.exs",
+      "describe": "delete/2",
+      "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 42,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test delete/2 when id exist, delete the meal"
+    },
+    {
+      "describe": "create/2",
+      "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/meals_controller_test.exs",
       "line": 7,
-      "module": "Elixir.Exmeal.Meals.UpdateTest",
-      "test": "test Update Meal when a valid id is given, returns the meal"
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test create/2 when all params are valid, creates a meal"
     },
     {
       "describe": "create/2",
@@ -44,46 +51,18 @@
       "test": "test create/2 when all params are valid, creates a user"
     },
     {
-      "describe": "get/2",
-      "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 106,
-      "module": "Elixir.Exmeal.MealsControllerTest",
-      "test": "test get/2 when id exist, return the meal"
-    },
-    {
       "describe": "update/2",
       "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 71,
+      "line": 70,
       "module": "Elixir.Exmeal.MealsControllerTest",
       "test": "test update/2 when id exist, update the meal"
     },
     {
-      "describe": "create/2",
+      "describe": "get/2",
       "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 5,
+      "line": 105,
       "module": "Elixir.Exmeal.MealsControllerTest",
-      "test": "test create/2 when all params are valid, creates a meal"
-    },
-    {
-      "describe": "delete/2",
-      "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 41,
-      "module": "Elixir.Exmeal.MealsControllerTest",
-      "test": "test delete/2 when id exist, delete the meal"
-    },
-    {
-      "describe": "create/2",
-      "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 24,
-      "module": "Elixir.Exmeal.MealsControllerTest",
-      "test": "test create/2 when there are invalid params, returns an error"
-    },
-    {
-      "describe": null,
-      "file": "/Users/heldercouto/exmeal/test/exmeal_web/views/meals_view_test.exs",
-      "line": 10,
-      "module": "Elixir.ExmealWeb.MealsViewTest",
-      "test": "test render create.json"
+      "test": "test get/2 when id exist, return the meal"
     },
     {
       "describe": null,
@@ -91,16 +70,23 @@
       "line": 27,
       "module": "Elixir.ExmealWeb.MealsViewTest",
       "test": "test render meal.json"
+    },
+    {
+      "describe": null,
+      "file": "/Users/heldercouto/exmeal/test/exmeal_web/views/meals_view_test.exs",
+      "line": 10,
+      "module": "Elixir.ExmealWeb.MealsViewTest",
+      "test": "test render create.json"
     }
   ],
   "invalid": [],
   "passed": [
     {
-      "describe": "Get User",
-      "file": "/Users/heldercouto/exmeal/test/exmeal/users/get_test.exs",
+      "describe": "changeset/1",
+      "file": "/Users/heldercouto/exmeal/test/exmeal/meals/meal_test.exs",
       "line": 9,
-      "module": "Elixir.Exmeal.Users.GetTest",
-      "test": "test Get User when a valid id is given, returns the user"
+      "module": "Elixir.Exmeal.Meals.MealTest",
+      "test": "test changeset/1 when all params are valid, returns a valid changeset"
     },
     {
       "describe": "Get User",
@@ -110,11 +96,11 @@
       "test": "test Get User when an invalid id is given, returns an error"
     },
     {
-      "describe": "Delete user",
-      "file": "/Users/heldercouto/exmeal/test/exmeal/users/delete_test.exs",
+      "describe": "Get User",
+      "file": "/Users/heldercouto/exmeal/test/exmeal/users/get_test.exs",
       "line": 9,
-      "module": "Elixir.Exmeal.Users.DeleteTest",
-      "test": "test Delete user when a valid id is given, returns the user"
+      "module": "Elixir.Exmeal.Users.GetTest",
+      "test": "test Get User when a valid id is given, returns the user"
     },
     {
       "describe": "Delete user",
@@ -124,9 +110,23 @@
       "test": "test Delete user when an invalid id is given, returns an error"
     },
     {
+      "describe": "Delete user",
+      "file": "/Users/heldercouto/exmeal/test/exmeal/users/delete_test.exs",
+      "line": 9,
+      "module": "Elixir.Exmeal.Users.DeleteTest",
+      "test": "test Delete user when a valid id is given, returns the user"
+    },
+    {
+      "describe": "Update Meal",
+      "file": "/Users/heldercouto/exmeal/test/exmeal/meals/update_test.exs",
+      "line": 26,
+      "module": "Elixir.Exmeal.Meals.UpdateTest",
+      "test": "test Update Meal when an invalid id is given, returns an error"
+    },
+    {
       "describe": "Create Meal",
       "file": "/Users/heldercouto/exmeal/test/exmeal/meals/create_test.exs",
-      "line": 24,
+      "line": 34,
       "module": "Elixir.Exmeal.Meals.CreateTest",
       "test": "test Create Meal when there are invalid params, returns an error"
     },
@@ -145,13 +145,6 @@
       "test": "test Get Meal when an invalid id is given, returns an error"
     },
     {
-      "describe": "Update Meal",
-      "file": "/Users/heldercouto/exmeal/test/exmeal/meals/update_test.exs",
-      "line": 26,
-      "module": "Elixir.Exmeal.Meals.UpdateTest",
-      "test": "test Update Meal when an invalid id is given, returns an error"
-    },
-    {
       "describe": "changeset/1",
       "file": "/Users/heldercouto/exmeal/test/exmeal/users/user_test.exs",
       "line": 11,
@@ -161,30 +154,23 @@
     {
       "describe": "Update Meal",
       "file": "/Users/heldercouto/exmeal/test/exmeal/users/update_test.exs",
-      "line": 9,
-      "module": "Elixir.Exmeal.Users.UpdateTest",
-      "test": "test Update Meal when a valid id is given, returns the meal"
-    },
-    {
-      "describe": "Update Meal",
-      "file": "/Users/heldercouto/exmeal/test/exmeal/users/update_test.exs",
       "line": 25,
       "module": "Elixir.Exmeal.Users.UpdateTest",
       "test": "test Update Meal when an invalid id is given, returns an error"
     },
     {
-      "describe": "get/2",
-      "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/users_controller_test.exs",
-      "line": 120,
-      "module": "Elixir.Exmeal.UsersControllerTest",
-      "test": "test get/2 when id exist, return the meal"
+      "describe": "Update Meal",
+      "file": "/Users/heldercouto/exmeal/test/exmeal/users/update_test.exs",
+      "line": 9,
+      "module": "Elixir.Exmeal.Users.UpdateTest",
+      "test": "test Update Meal when a valid id is given, returns the meal"
     },
     {
       "describe": "update/2",
-      "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/users_controller_test.exs",
-      "line": 81,
-      "module": "Elixir.Exmeal.UsersControllerTest",
-      "test": "test update/2 when id exist, update the user"
+      "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 92,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test update/2 when not exist id, return an error"
     },
     {
       "describe": "get/2",
@@ -194,6 +180,27 @@
       "test": "test get/2 when id not exist, return an error"
     },
     {
+      "describe": "delete/2",
+      "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 53,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test delete/2 when id exist, delete the user"
+    },
+    {
+      "describe": "create/2",
+      "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/meals_controller_test.exs",
+      "line": 27,
+      "module": "Elixir.Exmeal.MealsControllerTest",
+      "test": "test create/2 when there are invalid params, returns an error"
+    },
+    {
+      "describe": "update/2",
+      "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 107,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test update/2 when not exist id, return an error"
+    },
+    {
       "describe": "get/2",
       "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/users_controller_test.exs",
       "line": 142,
@@ -201,11 +208,18 @@
       "test": "test get/2 when id not exist, return an error"
     },
     {
-      "describe": "delete/2",
+      "describe": "create/2",
       "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/users_controller_test.exs",
-      "line": 53,
+      "line": 32,
       "module": "Elixir.Exmeal.UsersControllerTest",
-      "test": "test delete/2 when id exist, delete the user"
+      "test": "test create/2 when there are invalid params, returns an error"
+    },
+    {
+      "describe": "update/2",
+      "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/users_controller_test.exs",
+      "line": 81,
+      "module": "Elixir.Exmeal.UsersControllerTest",
+      "test": "test update/2 when id exist, update the user"
     },
     {
       "describe": "delete/2",
@@ -217,37 +231,16 @@
     {
       "describe": "delete/2",
       "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 56,
+      "line": 55,
       "module": "Elixir.Exmeal.MealsControllerTest",
       "test": "test delete/2 when id not exist, return an error"
     },
     {
-      "describe": "update/2",
+      "describe": "get/2",
       "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/users_controller_test.exs",
-      "line": 107,
+      "line": 120,
       "module": "Elixir.Exmeal.UsersControllerTest",
-      "test": "test update/2 when not exist id, return an error"
-    },
-    {
-      "describe": "update/2",
-      "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/meals_controller_test.exs",
-      "line": 93,
-      "module": "Elixir.Exmeal.MealsControllerTest",
-      "test": "test update/2 when not exist id, return an error"
-    },
-    {
-      "describe": "create/2",
-      "file": "/Users/heldercouto/exmeal/test/exmeal_web/controller/users_controller_test.exs",
-      "line": 32,
-      "module": "Elixir.Exmeal.UsersControllerTest",
-      "test": "test create/2 when there are invalid params, returns an error"
-    },
-    {
-      "describe": null,
-      "file": "/Users/heldercouto/exmeal/test/exmeal_web/views/users_view_test.exs",
-      "line": 12,
-      "module": "Elixir.ExmealWeb.UsersViewTest",
-      "test": "test render create.json"
+      "test": "test get/2 when id exist, return the meal"
     },
     {
       "describe": null,
@@ -258,10 +251,10 @@
     },
     {
       "describe": null,
-      "file": "/Users/heldercouto/exmeal/test/exmeal_web/views/error_view_test.exs",
-      "line": 7,
-      "module": "Elixir.ExmealWeb.ErrorViewTest",
-      "test": "test renders 404.json"
+      "file": "/Users/heldercouto/exmeal/test/exmeal_web/views/users_view_test.exs",
+      "line": 12,
+      "module": "Elixir.ExmealWeb.UsersViewTest",
+      "test": "test render create.json"
     },
     {
       "describe": null,
@@ -271,11 +264,11 @@
       "test": "test renders 500.json"
     },
     {
-      "describe": "Create User",
-      "file": "/Users/heldercouto/exmeal/test/exmeal/users/create_test.exs",
-      "line": 9,
-      "module": "Elixir.Exmeal.Users.CreateTest",
-      "test": "test Create User when all params are valid, returns the user"
+      "describe": null,
+      "file": "/Users/heldercouto/exmeal/test/exmeal_web/views/error_view_test.exs",
+      "line": 7,
+      "module": "Elixir.ExmealWeb.ErrorViewTest",
+      "test": "test renders 404.json"
     },
     {
       "describe": "Create User",
@@ -283,6 +276,13 @@
       "line": 24,
       "module": "Elixir.Exmeal.Users.CreateTest",
       "test": "test Create User when there are invalid params, returns an error"
+    },
+    {
+      "describe": "Create User",
+      "file": "/Users/heldercouto/exmeal/test/exmeal/users/create_test.exs",
+      "line": 9,
+      "module": "Elixir.Exmeal.Users.CreateTest",
+      "test": "test Create User when all params are valid, returns the user"
     }
   ],
   "skiped": []
